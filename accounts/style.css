@@ -1,0 +1,83 @@
+body {
+    font-size: 25px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(1, 1, 1, 0.5);
+    backdrop-filter: blur(2px);
+    display: none;
+}
+
+.loading-img {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    top: calc(50vh - (100px / 2));
+    left: calc(50vw - (100px / 2));
+}
+
+.loading-img > img {
+    width: 100px;
+    height: 100px;
+}
+
+.fields-box {
+    margin-top: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.field {
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-button {
+    background-color: #009FE3;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    color: white;
+    transition: box-shadow 0.2s;
+}
+
+.submit-button:hover {
+    box-shadow: 5px 5px 5px gray;
+}
+
+.field-input {
+    font-size: inherit;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.field-error-message {
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
+.other-choice {
+    display: flex;
+    justify-content: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+.space-between {
+    margin-bottom: 50px;
+}

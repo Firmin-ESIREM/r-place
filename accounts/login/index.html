@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>r/place - Connexion</title>
+    <link rel="stylesheet" href="../style.css"/>
+    <script src="../../check_auth.js"></script>
+    <script>
+        checkAuth(2);
+    </script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="overlay">
+        <div class="loading-img">
+            <img src="../../img/wait.gif" alt="Please wait">
+        </div>
+    </div>
+    <a href="../signup/" class="other-choice">
+        <button class="submit-button">Créer un compte</button>
+    </a>
+    <div class="fields-box">
+        <div class="field">
+            <label for="email">Adresse e-mail</label>
+            <input type="text" id="email" class="field-input">
+        </div>
+        <div class="field">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" class="field-input">
+        </div>
+        <div>
+            <button class="submit-button" id="do-login">Se connecter</button>
+        </div>
+        <div class="field-error-message" id="invalid-credentials">
+            <p>Identifiants invalides</p>
+        </div>
+        <div class="field-error-message" id="unhandled-error">
+            <p>Erreur inconnue</p>
+        </div>
+    </form>
+</body>
+</html>

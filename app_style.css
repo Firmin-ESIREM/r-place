@@ -1,0 +1,134 @@
+[data-color="1"] { background-color: white; }
+[data-color="2"] { background-color: black; }
+[data-color="3"] { background-color: red; }
+[data-color="4"] { background-color: green; }
+[data-color="5"] { background-color: yellow; }
+[data-color="6"] { background-color: blue; }
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.grids {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.grid-in-list {
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 30px;
+}
+
+.go-to-grid {
+    background-color: #009FE3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 150%;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: box-shadow 0.2s;
+}
+
+.go-to-grid:hover {
+    box-shadow: 5px 5px 5px gray;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+}
+
+.logout-wrapper {
+    display: flex;
+    justify-content: right;
+}
+
+.logout-and-back-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(30, 1fr);
+    border: solid 2px black;
+    padding: 5px;
+    /* row-gap: 2px;
+    column-gap: 2px; */
+}
+
+.pixel {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+}
+
+.pixel:hover {
+    border: 1px solid white;
+}
+
+.colors {
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.color {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.color:hover:not(.active-color) {
+    border: 1px solid lightgray;
+}
+
+.active-color {
+    border: 5px solid gray;
+    padding: 0;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.grid-name {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-name > * {
+    margin: 10px;
+}
+
+.grid-rename {
+    font-size: 30px;
+}
+
+.alert {
+    background-color: red;
+}
+
+
