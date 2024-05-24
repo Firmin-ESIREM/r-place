@@ -80,6 +80,7 @@ h1 {
     width: 15px;
     height: 15px;
     border: 1px solid black;
+    cursor: crosshair;
 }
 
 .pixel:hover {
@@ -129,6 +130,14 @@ h1 {
 
 .alert {
     background-color: red;
+}
+
+.new-grid {
+    margin-bottom: 30px;
+}
+
+.pixel-owner {
+    text-align: center;
 }
 
 

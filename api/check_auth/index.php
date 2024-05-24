@@ -1,17 +1,13 @@
 <?php
 
-include('../../include/config.inc.php');
+include('./check_auth.php');
 
 $token = $_COOKIE["r_place_login_token"];
 
 if ($token == "") {
     echo "{\"state\": \"KO\"}";
 } else {
-    $result_table;
-    $hashed_token = hash('sha512', $token);
-    $current_date = date("Y-m-d");
-    $sql = "SELECT `tokens`.`expiration_date`, `users`.`username` FROM `tokens`, `users` WHERE `tokens`.`token_hash` = '$hashed_token'";
-    GetSQL($sql, $result_table);
+    $result_table = check_auth($token);
     if ($result_table[0][0] == "" || strcmp($result_table[0][0], date("Y-m-d")) < 0) {
         echo "{\"state\": \"KO\"}";
     } else {

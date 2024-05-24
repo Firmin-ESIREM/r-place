@@ -1,4 +1,7 @@
 <?php
+
+// Fichier créé par Olivier LESPRIT.
+
 session_start();
 
 $host='localhost';
@@ -108,4 +111,5 @@ if (!function_exists("QuoteStr")) {
 
 // Ne pas oublier de terminer la page PHP, en fermant la connexion MySQL ( surtout pas ici)
 //  mysqli_close($link)
+
 ?>

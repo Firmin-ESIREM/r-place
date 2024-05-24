@@ -4,9 +4,13 @@ async function init() {
     });
     const grids = await gridsResult.json();
 
+    console.log(grids);
+
     const gridsLocation = document.querySelector('.grids');
 
     grids.forEach((grid) => {
+        if (!grid.name) return;
+
         const newGrid = document.createElement('div');
         newGrid.classList.add('grid-in-list');
 
