@@ -2,9 +2,11 @@
 
 // Fichier créé par Olivier LESPRIT.
 
+include('../secrets.php');
+
 session_start();
 
-$host='localhost';
+$host = 'localhost';
 $user = "r-place-app";
 $password = "XjrHHMc&hD5Fk3%";
 $base = "r-place";

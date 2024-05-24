@@ -23,9 +23,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             foreach (range(1, 30) as $x) {
                 foreach (range(1, 30) as $y) {
                     $result_table_pixel;
-                    $sql_pixel = "SELECT `color`, `owner`, `last_modified` FROM `pixels` WHERE `grid`='$grid_id'";
+                    $sql_pixel = "SELECT `color`, `owner`, `last_modified` FROM `pixels` WHERE `grid`='$grid_id' AND `x`='$x' AND `y`='$y'";
                     GetSQL($sql_pixel, $result_table_pixel);
-                    $pixel = array('x' => $x, 'y' => $y, 'color' => $result_table_pixel[0][0], 'owner' => $result_table_pixel[0][1], 'last_modified' => $result_table_pixel[0][2]);
+                    $username = "";
+                    $pixel_user_id = $result_table_pixel[0][1];
+                    if ($pixel_user_id != NULL) {
+                        $result_table_username;
+                        $sql_username = "SELECT `username` FROM `users` WHERE `id` = '$pixel_user_id'";
+                        GetSQL($sql_username, $result_table_username);
+                        $username = $result_table_username[0][0];
+                    }
+                    $pixel = array('x' => $x, 'y' => $y, 'color' => $result_table_pixel[0][0], 'owner' => $username, 'last_modified' => $result_table_pixel[0][2]);
                     array_push($pixels, $pixel);
                 }
             }

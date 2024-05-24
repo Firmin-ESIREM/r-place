@@ -29,6 +29,8 @@ async function login() {
         let errorIdToSelect;
         if (response.status === 401) {
             errorIdToSelect = 'invalid-credentials';
+        } else if (response.status === 403) {
+            errorIdToSelect = 'inactive';
         } else {
             errorIdToSelect = 'unhandled-error';
         }

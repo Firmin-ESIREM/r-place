@@ -81,3 +81,8 @@ a {
 .space-between {
     margin-bottom: 50px;
 }
+
+.password-forgotten {
+    color: #009FE3;
+}
+

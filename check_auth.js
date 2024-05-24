@@ -1,4 +1,4 @@
-accountsLocations = ['accounts', 'login', 'signup'];
+accountsLocations = ['accounts', 'login', 'signup', 'forgot_password'];
 
 async function checkAuth(currentPageDepth) {
     const result = await fetch(`./${'../'.repeat(currentPageDepth)}api/check_auth/`, {
@@ -6,7 +6,6 @@ async function checkAuth(currentPageDepth) {
     });
     const resultJson = await result.json();
 
-    console.log(resultJson);
     let currentLocation = document.location.pathname.split('/');
     currentLocation = currentLocation[currentLocation.length - 2];
     if (accountsLocations.includes(currentLocation)) {
